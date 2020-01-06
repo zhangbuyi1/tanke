@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/metaorology/meteorology-auto-taf-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metaorology/meteorology-manage-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metaorology/meteorology-nearprediction-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/metaorology/meteorology-taf-service" charset="UTF-8" />
+  </component>
+</project>
