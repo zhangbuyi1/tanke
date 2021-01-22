@@ -3,6 +3,9 @@ package com.shaohu.tanke;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.util.*;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class TanKe extends KeyAdapter {
     /**
@@ -28,7 +31,11 @@ public class TanKe extends KeyAdapter {
     /**
      * 坦克是否移动
      */
-    private boolean isMV=false;
+    private boolean isMV = false;
+    /**
+     * 子弹类
+     */
+    private List<Bullet> bullets = new ArrayList<>();
 
     /**
      * 坦克构造器
@@ -55,20 +62,26 @@ public class TanKe extends KeyAdapter {
      */
     public void paint(Graphics g) {
         g.fillRect(x, y, width, height);
+        bullets.stream().peek(s -> {
+            s.paint(g);
+        }).collect(Collectors.toList());
+        this.bullets = bullets.stream().filter(s -> {
+            return s.live;
+        }).collect(Collectors.toList());
     }
 
     /**
      * 坦克移动方法
      */
     public void setDir() {
-        if (up||dwon||right||left){
-            isMV=true;
+        if (up || dwon || right || left) {
+            isMV = true;
             if (up) dir = Direction.UP;
             if (dwon) dir = Direction.DOWN;
             if (left) dir = Direction.LEFT;
             if (right) dir = Direction.RIGHT;
-        }else {
-            isMV=false;
+        } else {
+            isMV = false;
         }
 
     }
@@ -96,8 +109,37 @@ public class TanKe extends KeyAdapter {
             case KeyEvent.VK_RIGHT:
                 right = true;
                 break;
+            case KeyEvent.VK_SPACE:
+                build();
+                break;
         }
         setDir();
+
+    }
+
+    /**
+     * 发射子弹
+     */
+    private void build() {
+        int x = this.x;
+        int y = this.y;
+        int buildWidth = 10;
+        int buildHeight = 10;
+        if (dir.equals(Direction.DOWN) || dir.equals(Direction.UP)) {
+            x = x + (width / 2) - (buildWidth / 2);
+            if (dir.equals(Direction.DOWN)) {
+                y = y + height;
+            }
+        }
+        if (dir.equals(Direction.LEFT) || dir.equals(Direction.RIGHT)) {
+            y = y + (height / 2) - (buildHeight / 2);
+            if (dir.equals(Direction.RIGHT)) {
+                x = x + width;
+            }
+
+
+        }
+        bullets.add(new Bullet(x, y, 2, dir, 10, 10));
     }
 
     /**
@@ -125,20 +167,21 @@ public class TanKe extends KeyAdapter {
         setDir();
 
     }
-    public  void mv(){
+
+    public void mv() {
         if (!isMV) return;
-        switch (dir){
+        switch (dir) {
             case UP:
-                y-=speed;
+                y -= speed;
                 break;
             case DOWN:
-                y+=speed;
+                y += speed;
                 break;
             case LEFT:
-                x-=speed;
+                x -= speed;
                 break;
             case RIGHT:
-                x+=speed;
+                x += speed;
                 break;
 
         }
