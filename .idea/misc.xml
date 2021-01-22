@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/metaorology/meteorology-manage-service/pom.xml" />
         <option value="$PROJECT_DIR$/metaorology/meteorology-auto-taf-service/pom.xml" />
         <option value="$PROJECT_DIR$/metaorology/meteorology-nearprediction-service/pom.xml" />
+        <option value="$PROJECT_DIR$/metaorology/meteorology-camera/pom.xml" />
+        <option value="$PROJECT_DIR$/metaorology/meteorology-sensor/pom.xml" />
+        <option value="$PROJECT_DIR$/metaorology/meteorology-manage-center/pom.xml" />
       </list>
     </option>
   </component>

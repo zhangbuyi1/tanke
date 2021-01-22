@@ -4,8 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Src.iml" filepath="$PROJECT_DIR$/.idea/Src.iml" />
       <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-auto-taf-service/meteorology-auto-taf-service.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-auto-taf-service/meteorology-auto-taf-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-camera/meteorology-camera.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-camera/meteorology-camera.iml" />
       <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-manage-service/meteorology-manage-service.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-manage-service/meteorology-manage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-manage-center/meteorology-message-center.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-manage-center/meteorology-message-center.iml" />
       <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-nearprediction-service/meteorology-nearprediction-service.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-nearprediction-service/meteorology-nearprediction-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/metaorology/meteorology-sensor/meteorology-sensor.iml" filepath="$PROJECT_DIR$/metaorology/meteorology-sensor/meteorology-sensor.iml" />
     </modules>
   </component>
 </project>

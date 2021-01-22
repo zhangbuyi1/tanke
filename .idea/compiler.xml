@@ -7,14 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="meteorology-auto-taf-service" />
+        <module name="meteorology-camera" />
         <module name="meteorology-manage-service" />
+        <module name="meteorology-message-center" />
         <module name="meteorology-nearprediction-service" />
+        <module name="meteorology-sensor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="meteorology-auto-taf-service" target="1.8" />
+      <module name="meteorology-camera" target="1.8" />
       <module name="meteorology-manage-service" target="1.8" />
+      <module name="meteorology-message-center" target="1.8" />
       <module name="meteorology-nearprediction-service" target="1.8" />
+      <module name="meteorology-sensor" target="1.8" />
       <module name="meteorology-taf-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
